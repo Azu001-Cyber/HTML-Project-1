@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+</head> <!-- TODO: create a navbar: home, about, work, resume contact-->
+        <!--TODO: create about section, work section, resume section and contact section -->
+        <!--TODO: create a page footer-->
+<body>  
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Work">Work</a></li>
+                <li><a href="#Resume">Resume</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <figure>
+            <video src="Resources/prj_vid.mp4" controls width="500px"></video>
+             <figcaption>
+                Video of a Person Encoding a computer
+            </figcaption>
+        </figure>
+       
+        
+        <!--About Section-->
+        <section id="About">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate developer with a love for creating modern and responsive web applications.
+                 I specialize in fullstack development and enjoy
+                 working on projects that challenge my creativity and skills.</p>
+
+        </section>
+
+        <!--Work Section-->
+        <section id="Work">
+            <h2>My Works</h2>
+            <ul>
+                <li><strong>Project 1:</strong>BloggingAPI, <i>made with Django Rest Framework.</i></li>
+                <li><strong>Project 2:</strong>Password Generator Script, <i>made with python programming language.</i></li>
+                <li><strong>Project 3:</strong>USSD Banking Script, <i>made with python programming language.</i></li>
+
+            </ul>
+
+        </section>
+
+        <!--Resume Section-->
+
+        <section id="Resume">
+            <h2>Resume Information</h2>
+            <a href="https://github.com/Azu001-Cyber"><button>Click To View</button></a>
+
+        </section>
+
+        <!--Contact Section-->
+        <section id="Contact">
+            <h2>Contact Me</h2>
+            <form action="/submit" method="post">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="email"> Email:</label>
+                <input type="text" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea name="message" id="message"  rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+</body>
+<footer>
+    &copy;2025 <i>Author: Chukwuebuka Moses</i>
+</footer>
+</html>
