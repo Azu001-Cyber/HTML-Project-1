@@ -1,0 +1,302 @@
+//  Set a primary color variable for reuse
+$primary-color: #c32adb3f;
+
+// Import Roboto font form Google Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Apply universal box-sizing and reset margins
+*{
+    box-sizing: content-box;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+//  Main layout container using CSS grid
+main{
+    margin-top: 10px;
+    margin-bottom: 10px;
+   display: grid;
+   column-gap: 100px;
+   grid-template-rows: auto auto auto auto;  //Set grid layout 4 rows with automatic height
+   grid-template-columns: repeat(3, 500px); //3 fixed-width columns
+    overflow:hidden
+}
+
+// Grid placement for About section
+#About{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+// Grid placement for work section
+#Work{
+    grid-column: 2 ;
+    grid-row: 2;
+}
+
+// Grid palcement for Resume section
+#Resume{
+    grid-row:3;
+    grid-column: 1;
+}
+
+// Grid palcement for Contact section
+
+#Contact{
+    grid-row: 4;
+    grid-column: 2;
+}
+
+
+// Top navigation bar container
+.Nav-bar{
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Navigation links container
+.Nav-bar > ul{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+// Individual nav list items
+.Nav-bar>ul>li{
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}
+
+// Styling nav links
+.Nav-bar>ul>li>a{
+    text-decoration: none;
+    color: #0f0f0f;
+}
+
+//  Hover effect for nav links
+.Nav-bar>ul>li>a:hover{
+    color:#00ffd0;
+}
+
+//  Header section with primary background color
+header{
+    background-color: $primary-color;
+    height: 50px;
+}
+
+//  Heading style
+h2{
+    text-align: center;
+}
+
+//  Common styles for each section box
+#About,#Work,#Resume,#Contact{
+    margin: 35px;
+    // margin-left: 15px;
+    width: 100%;
+    height:50vh;
+    border: 5px solid #c32adb3f;
+    // border: 5px solid #cf102f;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(52, 23, 23, 0.0622);
+}
+#About, #Work, #Resume, #Contact{
+    padding: 25px;
+}
+
+//  Make About section text bold
+
+#About p{
+    font-weight: bold;
+}
+
+//  Customize list item dots for Work section
+#Work li::marker{
+    color:  #c32adb3f;
+    font-size: 1.5rem;
+}
+
+// Make Resume section text bold
+
+#Resume p{
+    font-weight: bold;
+}
+
+//  Customize list item dots for Resume
+#Resume li::marker{
+    color:  #c32adb3f;
+    font-size: 1.5rem;
+
+}
+
+//  Skill section heading
+.skills{
+    text-align: center;
+    color:  #00ffd0;
+}
+
+
+//  Utility class for cuaton text
+
+.div{
+    color: #00ffd0;
+}
+
+//  Custom horizontal line style
+hr{
+    height: 3px;
+    // background-color: #ffffff;
+    outline: 1px solid #00ffd0;
+    background-color: #222;
+}
+
+//  Style specificalluy for Contact section
+#Contact{
+    background-color: #1a1a1a;
+    color: white;
+    padding: 3rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: scroll;
+  }
+
+//   Shared style for all main content section (except Contact)
+  #Resume , #Work, #About{
+    background-color: #1a1a1a;
+    color: white;
+    padding: 3rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  // Uniform styling for section headings
+  #Contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00ffd0;
+  }
+  #Work h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00ffd0;
+  }
+
+  #About h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00ffd0;
+  }
+
+  #Resume h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00ffd0;
+  }
+  // .....
+  
+
+  // Contact form layout using grid
+  form .form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+  }
+  
+
+//    Make message input and button span across columns
+  .form-container .item-3,
+  .form-container .item-4 {
+    grid-column: span 2;
+  }
+  
+
+//   Label styling
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+// input and textarea styling
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+  }
+
+// Focus effect for form fields
+  
+  input:focus,
+  textarea:focus {
+    outline: 2px solid #00ffd0;
+    background-color: #222;
+  }
+
+//   Submit button style
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #00ffd0;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+//   Hover effect for button
+  button:hover {
+    background-color: #00c6a1;
+  }
+
+//    Footer styling
+  
+.footer-cls{
+    background-color: $primary-color;
+    height: 15vh;
+}
+
+//  Center footer text
+.footer-cls p{
+    text-align: center;
+}
+
+//  footer link styles
+.footer-cls a{
+    text-decoration: none;
+    color: #0f0f0f;
+}
+
+//  Hover effects for footer links
+.footer-cls a:hover{
+    color: #00ffd0;
+}
+
+//  Layout for socail media links in footer
+.footer-cls .fsocial-div{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}

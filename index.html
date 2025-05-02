@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/scss/style.css">
     <title>Personal Portfolio</title>
-</head> <!-- TODO: create a navbar: home, about, work, resume contact-->
-        <!--TODO: create about section, work section, resume section and contact section -->
-        <!--TODO: create a page footer-->
+</head>
+ <!-- TODO: create a navbar: home, about, work, resume contact-->
+    <!--TODO: create about section, work section, resume section and contact section -->
+       <!--TODO: create a page footer-->
 <body>  
     <header>
-        <nav>
+        <nav class="Nav-bar">
             <ul>
-                <li>Home</li>
+                <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Work">Work</a></li>
                 <li><a href="#Resume">Resume</a></li>
@@ -19,14 +21,11 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <figure>
-            <video src="Resources/prj_vid.mp4" controls width="500px"></video>
-             <figcaption>
-                Video of a Person Encoding a computer
-            </figcaption>
-        </figure>
-       
+     <main>
+            <!-- <video autoplay muted loop playsinline class="bg-video"></video>
+            <source src="Resources/prj_vid.mp4" type="video/mp4">
+            Your browser does not support the video tag -->
+        
         
         <!--About Section-->
         <section id="About">
@@ -34,6 +33,7 @@
             <p>Hello! I'm a passionate developer with a love for creating modern and responsive web applications.
                  I specialize in fullstack development and enjoy
                  working on projects that challenge my creativity and skills.</p>
+         
 
         </section>
 
@@ -44,6 +44,7 @@
                 <li><strong>Project 1:</strong>BloggingAPI, <i>made with Django Rest Framework.</i></li>
                 <li><strong>Project 2:</strong>Password Generator Script, <i>made with python programming language.</i></li>
                 <li><strong>Project 3:</strong>USSD Banking Script, <i>made with python programming language.</i></li>
+                <li><strong>Project 4:</strong>Photograpy Portfolio, <i>made with HTML & CSS.</i></li>
 
             </ul>
 
@@ -53,29 +54,57 @@
 
         <section id="Resume">
             <h2>Resume Information</h2>
-            <a href="https://github.com/Azu001-Cyber"><button>Click To View</button></a>
-
+            <!-- <a href="https://github.com/Azu001-Cyber"><button>Click To View</button></a> -->
+             <span><p>Azuka Chukwuebuka Moses</p></span>
+             <p>mosesazuka37@gmail.com <span class="div">|</span> github.com/Azu001-Cyber <span class="div">|</span> Lagos, Nigeria </p>
+             <hr>
+             <p class="skills">SKILLS</p>
+                <ul>
+                    <li>Languages:HTML, CSS, Javascript, Python, SQL. </li>
+                    <li>Frameworks:Django, Django Rest Framework </li>
+                    <li>Tools:Git, Github, Vscode, PyCharm, AI.</li>
+                </ul>         
         </section>
 
         <!--Contact Section-->
         <section id="Contact">
             <h2>Contact Me</h2>
-            <form action="/submit" method="post">
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" required>
+            <form action="/submit" method="POST">
+                <div class="form-container">
+                     <div class="item-1">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" required>
+                   </div>
 
-                <label for="email"> Email:</label>
-                <input type="text" id="email" name="email" required>
+                   <div class="item-2">
+                      <label for="email"> Email:</label>
+                      <input type="text" id="email" name="email" required>
+                  </div>
+               
+
+                 <div class="item-3">
+                      <label for="message">Message:</label>
+                      <textarea name="message" id="message"  rows="5" required></textarea>
+                 </div>
+
+                <div class="item-4">
+                     <button type="submit">Send</button>
+                </div>
+               </div>
                 
-                <label for="message">Message:</label>
-                <textarea name="message" id="message"  rows="5" required></textarea>
-
-                <button type="submit">Send</button>
             </form>
         </section>
     </main>
 </body>
-<footer>
-    &copy;2025 <i>Author: Chukwuebuka Moses</i>
-</footer>
+<!-- footer section
+ 'contains my social links' -->
+<footer class="footer-cls">
+    <p>&copy;2025 Author:Azuka Chukwuebuka Moses. All rights reserved.</p>
+
+    <div class="fsocial-div">
+         <p><a href="https://www.linkedin.com/in/chukwuebuka-moses-2a3ab234b/">Linkedin</a></p>
+         <p><a href="https://github.com/Azu001-Cyber">Github</a></p>
+         <p><a href="https://www.instagram.com/cybercodemomo/">Instagram</a></p>
+    </div>
+    
 </html>

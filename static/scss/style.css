@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  box-sizing: content-box;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: repeat(3, 500px);
+  overflow: hidden;
+}
+
+#About {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+#Work {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#Resume {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+#Contact {
+  grid-row: 4;
+  grid-column: 2;
+}
+
+.Nav-bar {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Nav-bar > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.Nav-bar > ul > li {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.Nav-bar > ul > li > a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+.Nav-bar > ul > li > a:hover {
+  color: #00ffd0;
+}
+
+header {
+  background-color: rgba(195, 42, 219, 0.2470588235);
+  height: 50px;
+}
+
+h2 {
+  text-align: center;
+}
+
+#About, #Work, #Resume, #Contact {
+  margin: 35px;
+  width: 100%;
+  height: 50vh;
+  border: 5px solid rgba(195, 42, 219, 0.2470588235);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(52, 23, 23, 0.0622);
+}
+
+#About, #Work, #Resume, #Contact {
+  padding: 25px;
+}
+
+#About p {
+  font-weight: bold;
+}
+
+#Work li::marker {
+  color: rgba(195, 42, 219, 0.2470588235);
+  font-size: 1.5rem;
+}
+
+#Resume p {
+  font-weight: bold;
+}
+
+#Resume li::marker {
+  color: rgba(195, 42, 219, 0.2470588235);
+  font-size: 1.5rem;
+}
+
+.skills {
+  text-align: center;
+  color: #00ffd0;
+}
+
+.div {
+  color: #00ffd0;
+}
+
+hr {
+  height: 3px;
+  outline: 1px solid #00ffd0;
+  background-color: #222;
+}
+
+#Contact {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 3rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+}
+
+#Resume, #Work, #About {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 3rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#Contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffd0;
+}
+
+#Work h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffd0;
+}
+
+#About h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffd0;
+}
+
+#Resume h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffd0;
+}
+
+form .form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+}
+
+.form-container .item-3,
+.form-container .item-4 {
+  grid-column: span 2;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #00ffd0;
+  background-color: #222;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00ffd0;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00c6a1;
+}
+
+.footer-cls {
+  background-color: rgba(195, 42, 219, 0.2470588235);
+  height: 15vh;
+}
+
+.footer-cls p {
+  text-align: center;
+}
+
+.footer-cls a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+.footer-cls a:hover {
+  color: #00ffd0;
+}
+
+.footer-cls .fsocial-div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}/*# sourceMappingURL=style.css.map */
